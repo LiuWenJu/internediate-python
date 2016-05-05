@@ -1,0 +1,39 @@
+A simple Web Server:
+# python2
+python -m SimpleHTTPServer
+
+# python3
+
+python -m http.server
+
+#beautiful print 
+
+from pprint import pprint 
+
+my_dict = {'name': 'Yasoob', 'age': 'undefinded', 'personality': 'awesome'}
+pprint my_dict
+
+#quikly print beautiful json data from files
+
+cat file.json | python -m json.tool
+
+#analysis script
+
+python -m cProfile my_script.py
+
+#CSV convert to JSON
+
+python -c "import csv,json;print json.dumps(list(csv.reader(open('csv_file.csv'))))"
+
+#列表辗平
+a_list = [[1, 2], [3, 4], [5, 6]]
+print list(itertools.chain.from_iterable(a_list))
+
+##or
+print list(itertools.chain(*a_list))
+
+#一行式的构造器
+class A(object):
+    def __init__(self, a, b, c, d, e, f):
+        self.__dict__.update({k: v for k, v in locals().items() if k != 'self'})
+
