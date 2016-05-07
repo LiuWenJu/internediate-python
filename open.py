@@ -14,3 +14,7 @@ else:
 with io.open('summary.txt', 'w', encoding='utf-8') as outf:
     outf.write(text % len(jpgdata))
 
+
+
+##############
+##################
